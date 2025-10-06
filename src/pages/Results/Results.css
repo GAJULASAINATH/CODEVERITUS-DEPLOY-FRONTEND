@@ -1,0 +1,133 @@
+.results-page {
+  background: linear-gradient(135deg, #2c3e50, #fd746a);
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: #dcdcdc;
+  margin-bottom: 40px;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Table Styling */
+.table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 15px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.table th {
+  background: linear-gradient(135deg, #34495e, #1e1e2f);
+  font-weight: bold;
+  text-transform: uppercase;
+  position: sticky;
+  top: 0;
+}
+
+.table td {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.table tr:nth-child(even) td {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+/* Add animation when hovering */
+.table tr {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.table tr:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .table th,
+  .table td {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+.back-button {
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: #16a085;
+  transform: scale(1.05);
+}
