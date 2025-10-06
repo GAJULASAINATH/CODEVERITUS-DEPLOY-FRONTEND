@@ -1,5 +1,11 @@
 FROM node:alpine3.18 as build
 
+# providing runtime variables
+ARG REACT_APP_API_URL
+
+#env
+
+ENV REACT_APP_API_URL=$REACT_APP_API_URL
 # Build App
 WORKDIR /app
 COPY package.json .
