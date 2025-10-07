@@ -28,5 +28,5 @@ jobs:
         run: docker rm -f frontend-container || true  # Added '|| true' to ignore if container doesn't exist
       - name: Run container
         run: |
-          docker run -d -p 3000:80 --name frontend-container \
+          docker run -d -p 80:80 --name frontend-container \
             sainathdev7/codeveritus-frontend:latest
