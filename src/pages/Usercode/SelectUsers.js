@@ -34,7 +34,7 @@ const SelectUsersPage = ({ videoSrc, currentUser }) => { // Add currentUser as p
         code_samples: [codeInput],
       };
   
-      await axios.post(`api/users/submit`, userCode);
+      await axios.post(`/api/users/submit`, userCode);
       setSubmittedCode(codeInput);
       setCodeInput(""); 
     } catch (error) {
