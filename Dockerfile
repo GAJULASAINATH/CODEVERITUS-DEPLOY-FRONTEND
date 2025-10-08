@@ -1,24 +1,14 @@
-FROM node:alpine3.18 as build
-
-# providing runtime variables
-ARG REACT_APP_API_URL
-
-#env
-
-ENV REACT_APP_API_URL=$REACT_APP_API_URL
-# Build App
+# Stage 1: Build
+FROM node:18-alpine AS builder
 WORKDIR /app
-COPY package.json .
-RUN npm install
+COPY package*.json ./
+RUN npm ci
 COPY . .
-RUN npm run build
+RUN npm run build  # Outputs to /app/build
 
-# Serve with Nginx
-FROM nginx:1.23-alpine
-WORKDIR /usr/share/nginx/html
-RUN rm -rf *
-COPY --from=build /app/build .
-# Copy nginx config
-COPY nginx.conf /etc/nginx/nginx.conf
+# Stage 2: Serve with Nginx
+FROM nginx:alpine
+COPY --from=builder /app/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
-ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
+CMD ["nginx", "-g", "daemon off;"]
