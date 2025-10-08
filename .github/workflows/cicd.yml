@@ -31,5 +31,9 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ubuntu/codeveritus-deploy
+            docker-compose down -v --remove-orphans
+            docker system prune -f
+            docker volume prune -f
             docker-compose pull frontend
-            docker-compose up -d frontend
+            docker-compose up -d --force-recreate --build frontend
+
