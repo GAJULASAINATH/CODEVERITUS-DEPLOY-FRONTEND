@@ -31,7 +31,7 @@ const ResultsPage = () => {
         }
 
         const response = await axios.get(
-          `/api/admins/fetch/codeSubmissions`,
+          `https://codeveritus.tech/api/admins/fetch/codeSubmissions`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
