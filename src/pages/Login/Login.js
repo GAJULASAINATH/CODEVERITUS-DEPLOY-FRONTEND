@@ -29,7 +29,7 @@ const Login = ({ videoSrc }) => {
    
   
     try {
-      const endpoint = activeTab === 'user' ? '/api/users/login' : '/api/admins/login';
+      const endpoint = activeTab === 'user' ? 'api/users/login' : 'api/admins/login';
       
     
   
@@ -57,7 +57,7 @@ const Login = ({ videoSrc }) => {
     setSuccessMessage('');
 
     try {
-      const endpoint = activeTab === 'user' ? '/api/users/signup' : '/api/admins/signup';
+      const endpoint = activeTab === 'user' ? 'api/users/signup' : 'api/admins/signup';
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/${endpoint}`, {
         ...(activeTab === 'admin' 
           ? { adminname: credentials.username } 
