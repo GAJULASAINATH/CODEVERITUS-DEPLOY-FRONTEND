@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="container">
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img 
-            src="logot.png" 
+            src="logo.png" 
             alt="CodeVeritus Logo" 
             style={{ width: "40px", height: "40px", marginRight: "10px" }} 
           />
