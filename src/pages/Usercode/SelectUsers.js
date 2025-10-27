@@ -49,7 +49,7 @@ const SelectUsersPage = ({ videoSrc, currentUser }) => { // Add currentUser as p
     <div className="full-page-container">
       <div className="content animate-fade-in">
         <h1 className="title animate-slide-down">Code Entry Portal</h1>
-        <Video videoSrc="184815-874271897_medium.mp4" />
+        <Video videoSrc="video2.mp4" />
 
         <Typed
           className="tagline animate-typed"
