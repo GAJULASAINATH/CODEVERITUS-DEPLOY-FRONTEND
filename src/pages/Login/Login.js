@@ -77,7 +77,7 @@ const Login = ({ videoSrc }) => {
 
   return (
     <>
-      <Video videoSrc="3130182-uhd_3840_2160_30fps.mp4" />
+      <Video videoSrc="184815-874271897_medium.mp4" />
       <div className="login-container">
         <div className="content-section">
           <h2>Welcome to Our Platform</h2>

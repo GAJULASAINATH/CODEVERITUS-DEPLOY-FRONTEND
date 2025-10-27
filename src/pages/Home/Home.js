@@ -13,7 +13,7 @@ const Home = ({videoSrc}) => {
   return (
     <div id='/'>
        
-     <Video videoSrc="184815-874271897_medium.mp4" />
+     <Video videoSrc="3130182-uhd_3840_2160_30fps.mp4" />
      <Navbar/>
      <Intro className="p-8"/>
      <StatsSection/>
